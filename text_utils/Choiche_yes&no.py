@@ -1,7 +1,7 @@
 import secrets
 
-satu = "lakukan"
-dua = "jangan lakukan"
+satu = "Iya"
+dua = "Tidak"
 
 hasil = secrets.choice([satu, dua])
 print("Hasil acak (secure):", hasil)
