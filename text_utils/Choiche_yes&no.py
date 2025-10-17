@@ -1,7 +1,9 @@
-import secrets
+import os, numpy as np
 
-satu = "Iya"
-dua = "Tidak"
+opsi = ["iya", "Tidak"]
 
-hasil = secrets.choice([satu, dua])
-print("Hasil acak (secure):", hasil)
+rand_byte = int.from_bytes(os.urandom(1), "big")
+
+hasil = np.random.choice(opsi) if rand_byte % 2 == 0 else np.random.choice(opsi[::-1])
+
+print("Jawaban super random:", hasil)
